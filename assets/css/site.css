@@ -1,0 +1,109 @@
+/* Makerly Paper Co. brand v2: navy #28364D, coral #DB8064, cream #F9F4EB, sage #9DBBA5, mist #E3E8F0, sand #EFE4D6.
+   Lexend (headings) and Inter (text), both SIL Open Font License. */
+:root {
+  --navy: #28364D; --coral: #DB8064; --coral-dark: #B9603F; --cream: #F9F4EB;
+  --sage: #9DBBA5; --mist: #E3E8F0; --sand: #EFE4D6; --white: #FFFFFF;
+  --text: #28364D; --muted: #5A6578; --line: #E6DCCB;
+  --radius: 14px; --wrap: 1080px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--cream); color: var(--text);
+  font: 400 17px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+h1, h2, h3 { font-family: Lexend, Inter, system-ui, sans-serif; font-weight: 600; line-height: 1.2; color: var(--navy); }
+a { color: var(--coral-dark); text-underline-offset: 3px; }
+a:hover { color: var(--navy); }
+img { max-width: 100%; height: auto; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 740px; }
+
+.btn {
+  display: inline-block; background: var(--coral); color: var(--white); text-decoration: none;
+  font: 600 16px/1 Inter, sans-serif; padding: 14px 22px; border-radius: 999px; border: 2px solid var(--coral);
+}
+.btn:hover { background: var(--coral-dark); border-color: var(--coral-dark); color: var(--white); }
+.btn-ghost { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn-ghost:hover { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.btn-sm { padding: 9px 16px; font-size: 15px; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+
+.site-header { background: var(--white); border-bottom: 1px solid var(--line); }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+.brand img { display: block; width: 220px; height: auto; }
+.nav { display: flex; align-items: center; gap: 22px; font-weight: 500; }
+.nav a:not(.btn) { color: var(--navy); text-decoration: none; }
+.nav a:not(.btn):hover { color: var(--coral-dark); }
+
+.hero { background: var(--white); border-bottom: 1px solid var(--line); }
+.hero-row { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-top: 56px; padding-bottom: 56px; }
+.hero h1 { font-size: clamp(32px, 5vw, 50px); margin: 0 0 14px; max-width: 14ch; }
+.hero p { font-size: 19px; color: var(--muted); max-width: 52ch; margin: 0; }
+.hero-mark { width: 240px; flex: none; }
+.hero .cta-actions { margin-top: 28px; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 26px 0 0; }
+.chip { font: 600 13px/1 Inter, sans-serif; padding: 8px 14px; border-radius: 999px; }
+.chip-0 { background: var(--navy); color: var(--white); }
+.chip-1 { background: var(--coral); color: var(--white); }
+.chip-2 { background: var(--sage); color: var(--navy); }
+.chip-3 { background: var(--mist); color: var(--navy); }
+
+.posts { padding-top: 44px; padding-bottom: 64px; }
+.posts h2 { font-size: 28px; margin: 0 0 22px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+.card {
+  display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; color: var(--text); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(40, 54, 77, .12); color: var(--text); }
+.card-img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; background: var(--sand); display: block; }
+.card-img-empty { display: grid; place-items: center; }
+.card-img-empty img { width: 30%; }
+.card-body { padding: 18px 20px 22px; }
+.card-body time { font-size: 13px; color: var(--muted); }
+.card-body h3 { font-size: 20px; margin: 6px 0 8px; }
+.card-body p { margin: 0; color: var(--muted); font-size: 15px; }
+.empty { background: var(--white); border: 1px dashed var(--line); border-radius: var(--radius); padding: 24px; }
+
+.post, .page { padding-top: 44px; padding-bottom: 64px; }
+.eyebrow { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+.eyebrow a { color: var(--muted); }
+.post h1, .page h1 { font-size: clamp(30px, 4.4vw, 42px); margin: 0 0 14px; }
+.lede { font-size: 20px; color: var(--muted); margin: 0 0 26px; }
+.prose h2 { font-size: 26px; margin: 38px 0 10px; }
+.prose h3 { font-size: 20px; margin: 28px 0 8px; }
+.prose img { border-radius: var(--radius); border: 1px solid var(--line); display: block; margin: 10px auto 26px; max-height: 720px; }
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose blockquote { margin: 24px 0; padding: 4px 18px; border-left: 4px solid var(--coral); background: var(--white); border-radius: 0 10px 10px 0; }
+.prose code { background: var(--mist); padding: 2px 6px; border-radius: 6px; font-size: .9em; }
+.prose table { border-collapse: collapse; width: 100%; background: var(--white); }
+.prose th, .prose td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+.cta-box {
+  display: flex; gap: 18px; align-items: flex-start; margin-top: 44px; padding: 24px; background: var(--white);
+  border: 2px solid var(--coral); border-radius: var(--radius);
+}
+.cta-box img { flex: none; }
+.cta-box strong { font-family: Lexend, Inter, sans-serif; font-size: 20px; }
+.cta-box p { margin: 6px 0 0; color: var(--muted); }
+.cta-box .cta-actions { margin-top: 16px; }
+
+.site-footer { background: var(--navy); color: var(--cream); padding: 34px 0 26px; }
+.footer-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.footer-brand { display: flex; gap: 14px; align-items: center; }
+.footer-brand img { background: var(--cream); border-radius: 10px; padding: 4px; }
+.footer-brand p { margin: 2px 0 0; opacity: .8; font-size: 15px; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a { color: var(--cream); }
+.footer-links a:hover { color: var(--coral); }
+.fine { font-size: 13px; opacity: .7; margin-top: 22px; }
+
+@media (max-width: 720px) {
+  .hero-row { flex-direction: column-reverse; align-items: flex-start; gap: 18px; padding-top: 32px; padding-bottom: 36px; }
+  .hero-mark { width: 96px; }
+  .brand img { width: 170px; }
+  .nav { gap: 14px; font-size: 15px; }
+  .nav a[href$="/about/"] { display: none; }
+  .cta-box { flex-direction: column; }
+  .grid { grid-template-columns: 1fr; }
+}

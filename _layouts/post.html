@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="wrap narrow post" itemscope itemtype="http://schema.org/BlogPosting">
+  <p class="eyebrow"><a href="{{ '/' | relative_url }}">Guides</a> · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+  <h1 itemprop="headline">{{ page.title }}</h1>
+  {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+  <div class="prose" itemprop="articleBody">{{ content }}</div>
+  <aside class="cta-box">
+    <img src="{{ '/assets/img/brand/logo-mark-256.png' | relative_url }}" alt="" width="56" height="56">
+    <div>
+      <strong>New here? Start free.</strong>
+      <p>The free Budget Starter works in Google Sheets or Excel. Every template in the shop is tested before it goes live.</p>
+      <p class="cta-actions"><a class="btn" href="{{ site.starter_url }}">Get the free starter</a> <a class="btn btn-ghost" href="{{ site.shop_url }}">Visit the shop</a></p>
+    </div>
+  </aside>
+</article>

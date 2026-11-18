@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap hero-row">
+    <div class="hero-text">
+      <h1>{{ site.tagline }}</h1>
+      <p>Plain how-to guides for budgets, planners, spreadsheets and templates. I make and test every product in the shop.</p>
+      <p class="cta-actions"><a class="btn" href="{{ site.starter_url }}">Get the free starter</a> <a class="btn btn-ghost" href="{{ site.shop_url }}">Visit the shop</a></p>
+      <ul class="chips">{% for t in site.topics %}<li class="chip chip-{{ forloop.index | modulo: 4 }}">{{ t }}</li>{% endfor %}</ul>
+    </div>
+    <img class="hero-mark" src="{{ '/assets/img/brand/logo-mark.svg' | relative_url }}" alt="" width="260" height="260">
+  </div>
+</section>
+<section class="wrap posts">
+  <h2>Latest guides</h2>
+  {% if site.posts.size > 0 %}
+  <div class="grid">
+    {% for post in site.posts %}
+    <a class="card" href="{{ post.url | relative_url }}">
+      {% if post.image %}<img class="card-img" src="{{ post.image | relative_url }}" alt="" loading="lazy">{% else %}<div class="card-img card-img-empty"><img src="{{ '/assets/img/brand/logo-mark.svg' | relative_url }}" alt=""></div>{% endif %}
+      <div class="card-body">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h3>{{ post.title }}</h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">The first guide is on its way. Meanwhile, the <a href="{{ site.starter_url }}">free Budget Starter</a> is ready to download.</p>
+  {% endif %}
+</section>
