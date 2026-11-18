@@ -1,4 +1,24 @@
 title: Makerly Paper Co.
-description: Digital templates and printables that make life easier, with plain how-to guides.
-theme: minima
+tagline: Useful digital tools that work on day one.
+description: Plain how-to guides for budgets, planners, spreadsheets and templates, from a small shop that makes and tests every product.
+url: https://makerlypaperco.github.io
+baseurl: ""
+lang: en
 permalink: /blog/:title/
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+logo: /assets/img/brand/logo-mark-256.png
+image: /assets/img/brand/social-card-1200x630.png
+shop_url: https://makerlypaperco.gumroad.com
+starter_url: https://makerlypaperco.gumroad.com/l/beginner-budget-starter
+social:
+  name: Makerly Paper Co.
+  links:
+    - https://makerlypaperco.gumroad.com
+    - https://www.pinterest.com/makerlypaperco/
+    - https://www.tumblr.com/makerlypaperco
+topics: [Planners, Spreadsheets, Templates, Printables, Notion, Creative assets]
+exclude: [README.md]

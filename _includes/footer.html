@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="{{ '/assets/img/brand/logo-mark-256.png' | relative_url }}" alt="" width="40" height="40">
+      <div>
+        <strong>{{ site.title }}</strong>
+        <p>{{ site.tagline }}</p>
+      </div>
+    </div>
+    <nav class="footer-links">
+      <a href="{{ site.shop_url }}">Gumroad shop</a>
+      <a href="https://www.pinterest.com/makerlypaperco/">Pinterest</a>
+      <a href="https://www.tumblr.com/makerlypaperco">Tumblr</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+  </div>
+  <div class="wrap fine">&copy; {{ site.time | date: '%Y' }} {{ site.title }} Some posts link to templates I made; each one says so.</div>
+</footer>
