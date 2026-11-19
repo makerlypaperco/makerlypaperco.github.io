@@ -1,0 +1,35 @@
+---
+layout: null
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Makerly hand-off</title>
+</head>
+<body>
+<script>
+// Shop tool: lets the shop's Gumroad tab read one encrypted file from a temporary hand-off branch of this
+// repository (Gumroad's page may not fetch other hosts itself). Only gumroad.com may ask, and only for
+// raw files of this repository's handoff-* branches. The file stays encrypted; the shop's tab decrypts it.
+(function () {
+  var ALLOWED = ["https://gumroad.com", "https://app.gumroad.com"];
+  var SRC = /^https:\/\/raw\.githubusercontent\.com\/makerlypaperco\/makerlypaperco\.github\.io\/handoff-[a-z0-9-]{4,40}\/[A-Za-z0-9._-]{1,80}$/;
+  window.addEventListener("message", function (e) {
+    if (ALLOWED.indexOf(e.origin) < 0 || !e.data || typeof e.data.src !== "string") return;
+    var reply = function (msg, transfer) { e.source.postMessage(msg, e.origin, transfer || []); };
+    if (!SRC.test(e.data.src)) { reply({ id: e.data.id, ok: false, error: "source not allowed" }); return; }
+    fetch(e.data.src, { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.arrayBuffer(); })
+      .then(function (buf) { reply({ id: e.data.id, ok: true, bytes: buf.byteLength, buf: buf }, [buf]); })
+      .catch(function (err) { reply({ id: e.data.id, ok: false, error: String(err) }); });
+  });
+  if (window.parent !== window) {
+    ALLOWED.forEach(function (o) { try { window.parent.postMessage({ ready: true }, o); } catch (x) {} });
+  }
+})();
+</script>
+</body>
+</html>
