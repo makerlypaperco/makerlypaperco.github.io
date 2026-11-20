@@ -75,6 +75,9 @@ img { max-width: 100%; height: auto; }
 .prose h3 { font-size: 20px; margin: 28px 0 8px; }
 .prose img { border-radius: var(--radius); border: 1px solid var(--line); display: block; margin: 10px auto 26px; max-height: 720px; }
 .prose ul, .prose ol { padding-left: 1.3em; }
+.prose ol li { margin: 6px 0; }
+.prose blockquote ul { margin: 6px 0 10px; }
+.byline { color: var(--navy); font-weight: 500; }
 .prose blockquote { margin: 24px 0; padding: 4px 18px; border-left: 4px solid var(--coral); background: var(--white); border-radius: 0 10px 10px 0; }
 .prose code { background: var(--mist); padding: 2px 6px; border-radius: 6px; font-size: .9em; }
 .prose table { border-collapse: collapse; width: 100%; background: var(--white); }

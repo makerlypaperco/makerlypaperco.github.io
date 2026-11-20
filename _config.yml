@@ -4,6 +4,8 @@ description: Plain how-to guides for budgets, planners, spreadsheets and templat
 url: https://makerlypaperco.github.io
 baseurl: ""
 lang: en
+# Byline of every post (GOS skill 16 blog-seo 2.0.0): the shop, never an invented person.
+author: Makerly Paper Co.
 permalink: /blog/:title/
 theme: minima
 plugins:
