@@ -1,0 +1,2 @@
+{%- comment -%} Links to every Makerly profile listed in _config.yml `profiles` (empty urls are skipped). {%- endcomment -%}
+{%- for p in site.profiles -%}{%- if p.url and p.url != "" -%}<a href="{{ p.url }}" rel="me noopener">{{ p.name }}</a>{%- endif -%}{%- endfor -%}

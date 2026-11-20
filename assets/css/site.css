@@ -96,6 +96,8 @@ img { max-width: 100%; height: auto; }
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer-links a { color: var(--cream); }
 .footer-links a:hover { color: var(--coral); }
+.follow { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; font-size: 15px; }
+.follow span { color: var(--navy); font-weight: 600; }
 .fine { font-size: 13px; opacity: .7; margin-top: 22px; }
 
 @media (max-width: 720px) {
@@ -103,7 +105,7 @@ img { max-width: 100%; height: auto; }
   .hero-mark { width: 96px; }
   .brand img { width: 170px; }
   .nav { gap: 14px; font-size: 15px; }
-  .nav a[href$="/about/"] { display: none; }
+  .nav a[href$="/about/"], .nav .nav-ig { display: none; }
   .cta-box { flex-direction: column; }
   .grid { grid-template-columns: 1fr; }
 }
