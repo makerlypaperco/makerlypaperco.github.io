@@ -11,3 +11,5 @@ Every product is tested before it goes live, comes with a short "Start Here" gui
 This blog shares plain how-to guides. When a post links to a template, I made that template, and the post says so.
 
 [Visit the shop]({{ site.shop_url }}) · [Get the free Budget Starter]({{ site.starter_url }})
+
+Follow Makerly Paper Co.: <span class="follow">{% include profiles.html %}</span>

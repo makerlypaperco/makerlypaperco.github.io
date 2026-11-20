@@ -12,14 +12,37 @@ plugins:
   - jekyll-sitemap
 logo: /assets/img/brand/logo-mark-256.png
 image: /assets/img/brand/social-card-1200x630.png
-shop_url: https://makerlypaperco.gumroad.com
-starter_url: https://makerlypaperco.gumroad.com/l/beginner-budget-starter
+# Gumroad links carry UTM tags (GOS skill traffic-data) so Gumroad analytics shows the blog as the source.
+shop_url: https://makerlypaperco.gumroad.com/?utm_source=blog&utm_medium=site&utm_campaign=shop
+starter_url: https://makerlypaperco.gumroad.com/l/beginner-budget-starter?utm_source=blog&utm_medium=site&utm_campaign=free-starter
+# Every Makerly profile, in the order shown in the footer, the About page and under each post.
+# A profile with an empty url is hidden (Bluesky: fill in once the account exists).
+profiles:
+  - name: Instagram
+    url: https://www.instagram.com/makerlypaper.co/
+  - name: Threads
+    url: https://www.threads.com/@makerlypaper.co
+  - name: Pinterest
+    url: https://www.pinterest.com/makerlypaperco/
+  - name: X
+    url: https://x.com/MakerlyPaperCo
+  - name: Tumblr
+    url: https://www.tumblr.com/makerlypaperco
+  - name: Medium
+    url: https://medium.com/@MakerlyPaperCompany
+  - name: Bluesky
+    url: ""
+# Profiles Google may tie to this site (jekyll-seo-tag sameAs); keep in step with `profiles`.
 social:
   name: Makerly Paper Co.
   links:
     - https://makerlypaperco.gumroad.com
+    - https://www.instagram.com/makerlypaper.co/
+    - https://www.threads.com/@makerlypaper.co
     - https://www.pinterest.com/makerlypaperco/
+    - https://x.com/MakerlyPaperCo
     - https://www.tumblr.com/makerlypaperco
+    - https://medium.com/@MakerlyPaperCompany
 topics: [Planners, Spreadsheets, Templates, Printables, Notion, Creative assets]
 exclude: [README.md]
 # Pinterest (GOS skill 40 pinterest-method): every pin links to its own page under /pins/, made by GOS with
