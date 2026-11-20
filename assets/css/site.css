@@ -107,3 +107,4 @@ img { max-width: 100%; height: auto; }
   .cta-box { flex-direction: column; }
   .grid { grid-template-columns: 1fr; }
 }
+.pin-page .pin-image { display: block; width: 100%; max-width: 480px; height: auto; margin: 18px auto 8px; border-radius: 12px; }
