@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="wrap narrow page pin-page">
+  <p class="eyebrow"><a href="{{ '/' | relative_url }}">Makerly Paper Co.</a>{% if page.board %} · {{ page.board }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.pin_image %}<img class="pin-image" src="{{ page.pin_image | relative_url }}" alt="{{ page.alt | escape }}" width="1000" height="1500">{% endif %}
+  <div class="prose">{{ content }}</div>
+  {% if page.cta_url %}<p class="cta-actions"><a class="btn" href="{{ page.cta_url }}">{{ page.cta_label | default: "See it on Gumroad" }}</a> <a class="btn btn-ghost" href="{{ site.shop_url }}">Visit the shop</a></p>{% endif %}
+</article>

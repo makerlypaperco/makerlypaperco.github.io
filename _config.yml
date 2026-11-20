@@ -22,3 +22,15 @@ social:
     - https://www.tumblr.com/makerlypaperco
 topics: [Planners, Spreadsheets, Templates, Printables, Notion, Creative assets]
 exclude: [README.md]
+# Pinterest (GOS skill 40 pinterest-method): every pin links to its own page under /pins/, made by GOS with
+# the pin's image and text and one button to the product; the pins reach Pinterest through the RSS feeds in
+# /feeds/ (one feed per board). The pages are thin on purpose: kept out of the sitemap and of Google.
+defaults:
+  - scope:
+      path: "pins"
+    values:
+      layout: pin
+      sitemap: false
+      robots: "noindex, follow"
+      seo:
+        type: article
